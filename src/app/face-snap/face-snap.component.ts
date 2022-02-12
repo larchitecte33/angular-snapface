@@ -19,14 +19,16 @@ export class FaceSnapComponent {
 
   onClickSnap() {
     if(this.isSnaped) {
-      this.faceSnap.snaps--;
+      //this.faceSnap.snaps--;
       this.texteSnap = 'Oh Snap!';
     }
     else {
-      this.faceSnap.snaps++;
+      //this.faceSnap.snaps++;
       this.texteSnap = 'Oops, unsnap...';
     }
 
     this.isSnaped = !this.isSnaped;
+
+    this.faceSnap.snaps++;
   }
 }
