@@ -1,13 +1,5 @@
-<div class="face-snap-card" [ngClass]="{ snapped: texteSnap === 'Oops, unsnap...' }">
-    <!-- Angular fournit trois pipes pour modifier la casse affichée d'une chaîne de caractères : UpperCasePipe, LowerCasePipe, 
-        et TitleCasePipe pour les majuscules, les minuscules et le mélange type "titre". -->
+<div class="face-snap-card" [ngClass]="{ snapped: texteSnap === 'Oops, unSnap!' }">
     <h2>{{ faceSnap.title | uppercase }}</h2>
-    <p>Mis en ligne le {{ faceSnap.createdDate | date: 'dd/MM/yy, à HH:mm' }}</p>
-    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
-    <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
     <p>{{ faceSnap.description }}</p>
-    <p>
-        <button (click)="onClickSnap()">{{ texteSnap }}</button>
-        <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">snaps : {{ faceSnap.snaps }}</span>
-    </p>
+    <button (click)="onViewFaceSnap()">VIEW</button>
 </div>
